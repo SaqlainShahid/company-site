@@ -359,8 +359,8 @@ export const mockFaqEntries: FaqEntry[] = [
 
 export const developerVerifiedData = {
   name: "Saqlain Shahid",
-  title: "Full-Stack & Mobile App Developer",
-  intro: "Building web, mobile and custom software products across modern JavaScript, React, Next.js, Flutter, Node.js and cloud-backed ecosystems.",
+  title: "Founder & Lead Full-Stack Architect",
+  intro: "Leading our engineering collective to architect and ship high-performance web, mobile, SaaS, and custom software products across modern JavaScript, React, Next.js, Flutter, Node.js, and cloud ecosystems.",
   fiverrUsername: "@saqlain_shahid_",
   fiverrUrl: "https://www.fiverr.com/saqlain_shahid_",
   level: "Level 1 Seller",
@@ -376,7 +376,7 @@ export const developerVerifiedData = {
     title: "Cross-Platform Development",
     rating: "5.0 (7)",
     startingPrice: "$100",
-    description: "I will develop react, expo, flutter apps for mobile, desktop, web"
+    description: "Developing responsive React, Expo, and Flutter applications for mobile, desktop, and web"
   },
   experience: {
     company: "Techlania",

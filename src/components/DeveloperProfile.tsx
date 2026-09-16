@@ -29,11 +29,11 @@ export const DeveloperProfile: React.FC = () => {
           {/* Overline Technical Badge */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-space-lg">
             <span className="font-headline text-label-sm text-[#FF4500] tracking-widest uppercase border border-[#FF4500]/40 px-2 py-0.5 w-fit">
-              [01 — DEVELOPER PROFILE]
+              [01 — FOUNDER & TECHNICAL LEADERSHIP]
             </span>
             <div className="hidden sm:block h-[1px] flex-1 bg-[#343634]" />
             <span className="font-headline text-label-sm text-on-surface-variant tracking-widest font-mono">
-              VERIFIED PRACTITIONER SPECIFICATION
+              VERIFIED PRACTITIONER & TEAM ARCHITECTURE
             </span>
           </div>
 
@@ -91,7 +91,7 @@ export const DeveloperProfile: React.FC = () => {
                       SAQLAIN SHAHID
                     </span>
                     <span className="font-body text-[11px] text-on-surface-variant mt-1 block font-mono">
-                      FULL-STACK & MOBILE APP DEVELOPER
+                      FOUNDER & LEAD ARCHITECT
                     </span>
                   </div>
 
@@ -225,7 +225,7 @@ export const DeveloperProfile: React.FC = () => {
       </div>
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          TECHNOLOGY STACK INDEX (TOOLS I WORK WITH)
+          TECHNOLOGY STACK INDEX (TOOLS WE WORK WITH)
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="border-b border-[#343634] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -235,7 +235,7 @@ export const DeveloperProfile: React.FC = () => {
             </span>
             <div className="hidden sm:block h-[1px] flex-1 bg-[#343634]" />
             <span className="font-headline text-label-sm text-on-surface-variant tracking-widest font-mono">
-              TOOLS I WORK WITH
+              TOOLS WE WORK WITH
             </span>
           </div>
 
@@ -244,7 +244,7 @@ export const DeveloperProfile: React.FC = () => {
               TECHNOLOGY ECOSYSTEM
             </h2>
             <p className="font-body text-body-md text-on-surface-variant mt-2 max-w-2xl">
-              Organized technical discipline across frontend, mobile, backend, database architectures, and artificial intelligence APIs.
+              Organized technical discipline across frontend, mobile, backend, database architectures, and artificial intelligence APIs engineered by our team.
             </p>
           </div>
 
@@ -365,13 +365,13 @@ export const DeveloperProfile: React.FC = () => {
       </div>
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          03 — WHAT I BUILD: 6 DISCIPLINE ROWS
+          03 — WHAT WE BUILD: 6 DISCIPLINE ROWS
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="border-b border-[#343634] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-space-lg">
             <span className="font-headline text-label-sm text-[#FF4500] tracking-widest uppercase border border-[#FF4500]/40 px-2 py-0.5 w-fit">
-              [03 — WHAT I BUILD]
+              [03 — WHAT WE BUILD]
             </span>
             <div className="hidden sm:block h-[1px] flex-1 bg-[#343634]" />
             <span className="font-headline text-label-sm text-on-surface-variant tracking-widest font-mono">
@@ -384,7 +384,7 @@ export const DeveloperProfile: React.FC = () => {
               SERVICES & CAPABILITIES
             </h2>
             <p className="font-body text-body-md text-on-surface-variant mt-2 max-w-2xl">
-              Focused, technical implementation across modern client and server architectures.
+              Focused, technical implementation across modern client and server architectures engineered by our team.
             </p>
           </div>
 
@@ -534,7 +534,7 @@ export const DeveloperProfile: React.FC = () => {
       </div>
 
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-          PERSONAL POSITIONING: CLOSING STATEMENT
+          TEAM POSITIONING: CLOSING STATEMENT
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
       <div className="py-20 bg-[#131413]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
@@ -543,14 +543,14 @@ export const DeveloperProfile: React.FC = () => {
               [POSITIONING STATEMENT]
             </span>
             <h2 className="font-headline text-2xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-primary leading-tight max-w-4xl">
-              I BUILD DIGITAL PRODUCTS FROM INTERFACE TO BACKEND.
+              WE BUILD DIGITAL PRODUCTS FROM INTERFACE TO BACKEND.
             </h2>
             <p className="font-body text-base sm:text-lg text-on-surface-variant mt-5 max-w-3xl leading-relaxed">
-              From responsive web applications and cross-platform mobile apps to APIs, databases and AI integrations — I work across the product stack to turn ideas into working software.
+              From responsive web applications and cross-platform mobile apps to APIs, databases, and AI integrations — our engineering team works across the product stack to turn complex ideas into robust, production-ready software.
             </p>
             <div className="mt-8 pt-6 border-t border-[#343634] flex flex-wrap items-center justify-between gap-4">
               <span className="font-mono text-xs text-on-surface-variant">
-                SAQLAIN SHAHID · FULL-STACK & MOBILE APP DEVELOPER
+                SAQLAIN SHAHID · FOUNDER & LEAD ARCHITECT // VECTORS & CODE
               </span>
               <a 
                 href="#contact" 
