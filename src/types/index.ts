@@ -80,4 +80,21 @@ export interface BriefResponse {
   data?: BriefFormData;
 }
 
-export type NavTab = 'work' | 'services' | 'solutions' | 'process' | 'about' | 'contact';
+export interface RealClientReview {
+  id: string;
+  number: string;
+  text: string;
+  rating: number;
+  highlight?: string;
+}
+
+export interface RealPortfolioItem {
+  id: string;
+  title: string;
+  category: string;
+  technology: string;
+  status: string;
+  description: string;
+}
+
+export type NavTab = 'work' | 'services' | 'solutions' | 'process' | 'developer' | 'about' | 'contact';

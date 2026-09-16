@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { IntroSection } from './components/IntroSection';
+import { DeveloperProfile } from './components/DeveloperProfile';
 import { ServicesSection } from './components/ServicesSection';
 import { SelectedWork } from './components/SelectedWork';
 import { CaseStudyDeepDive } from './components/CaseStudyDeepDive';
@@ -26,6 +27,7 @@ export const App: React.FC = () => {
         <div className="flex flex-col w-full text-on-surface bg-[#171817]">
           <HeroSection />
           <IntroSection />
+          <DeveloperProfile />
           <ServicesSection />
           <SelectedWork />
           <CaseStudyDeepDive />

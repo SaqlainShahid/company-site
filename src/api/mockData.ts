@@ -6,7 +6,9 @@ import type {
   TechStackCategory, 
   ManifestoPillar, 
   TestimonialNote, 
-  FaqEntry 
+  FaqEntry,
+  RealClientReview,
+  RealPortfolioItem
 } from '../types';
 
 export const mockCapabilities: Capability[] = [
@@ -348,5 +350,190 @@ export const mockFaqEntries: FaqEntry[] = [
     number: '06',
     question: 'How do we start a project with Vectors & Code?',
     answer: 'Fill out our project intake form below with your specifications. Our managing director will review and schedule a technical scoping call within 24 hours.'
+  }
+];
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   REAL VERIFIED DEVELOPER PROFILE DATA (SOURCE OF TRUTH)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+export const developerVerifiedData = {
+  name: "Saqlain Shahid",
+  title: "Full-Stack & Mobile App Developer",
+  intro: "Building web, mobile and custom software products across modern JavaScript, React, Next.js, Flutter, Node.js and cloud-backed ecosystems.",
+  fiverrUsername: "@saqlain_shahid_",
+  fiverrUrl: "https://www.fiverr.com/saqlain_shahid_",
+  level: "Level 1 Seller",
+  rating: "5.0 / 5.0",
+  totalReviews: 7,
+  fiveStarReviews: 7,
+  hourlyRate: "$20 / HR",
+  averageResponse: "~2 HOURS",
+  memberSince: "January 2021",
+  location: "Pakistan",
+  focus: "Web · Mobile · SaaS · AI",
+  primaryGig: {
+    title: "Cross-Platform Development",
+    rating: "5.0 (7)",
+    startingPrice: "$100",
+    description: "I will develop react, expo, flutter apps for mobile, desktop, web"
+  },
+  experience: {
+    company: "Techlania",
+    role: "Web Developer — Part-time",
+    period: "July 2025 – August 2025"
+  }
+};
+
+export const verifiedReviewsList: RealClientReview[] = [
+  {
+    id: 'rev-1',
+    number: '01',
+    text: "Saqlain was fast, careful, responsive, used modern solutions, and stayed in touch all the way through the project. He delivered excellent value for his very reasonable fee. I highly recommend him.",
+    rating: 5.0,
+    highlight: "MODERN SOLUTIONS & CAREFUL EXECUTION"
+  },
+  {
+    id: 'rev-2',
+    number: '02',
+    text: "Exceptional delivery from saqlain on my Flutter Flow app project. Highly recommended for his expertise and professionalism.",
+    rating: 5.0,
+    highlight: "FLUTTER FLOW & PROFESSIONALISM"
+  },
+  {
+    id: 'rev-3',
+    number: '03',
+    text: "good job as expected",
+    rating: 5.0,
+    highlight: "RELIABLE SPECIFICATION DELIVERY"
+  },
+  {
+    id: 'rev-4',
+    number: '04',
+    text: "Great work done",
+    rating: 5.0,
+    highlight: "QUALITY OUTCOME"
+  },
+  {
+    id: 'rev-5',
+    number: '05',
+    text: "Great attentive to details",
+    rating: 5.0,
+    highlight: "ATTENTION TO ARCHITECTURAL DETAIL"
+  }
+];
+
+export const developerTechCategories = [
+  {
+    number: '01',
+    category: 'FRONTEND',
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS']
+  },
+  {
+    number: '02',
+    category: 'MOBILE',
+    skills: ['Flutter', 'React Native', 'Expo']
+  },
+  {
+    number: '03',
+    category: 'BACKEND',
+    skills: ['Node.js', 'Express.js', 'Python', 'REST APIs']
+  },
+  {
+    number: '04',
+    category: 'DATA',
+    skills: ['Firebase', 'MongoDB', 'MySQL', 'Supabase']
+  },
+  {
+    number: '05',
+    category: 'AI',
+    skills: ['AI Integrations', 'LLM APIs', 'Chatbots', 'AI Automation']
+  },
+  {
+    number: '06',
+    category: 'OTHER',
+    skills: ['Git', 'GitHub', 'Authentication', 'API Integrations']
+  }
+];
+
+export const developerSecondaryTech = [
+  'ASP.NET', 'Blazor', 'C#', 'MVC', 'Entity Framework', 'RESTful APIs',
+  'Web API', 'Role Management', 'SQL Server', 'Bootstrap', 'AJAX',
+  'Dependency Injection', 'Repository Pattern', 'N-Tier Architecture'
+];
+
+export const developerServicesList = [
+  {
+    number: '01',
+    title: 'WEB APPLICATIONS',
+    description: 'High-performance responsive frontends and full-stack web platforms engineered for speed and reliability.'
+  },
+  {
+    number: '02',
+    title: 'MOBILE APPLICATIONS',
+    description: 'Cross-platform mobile applications for iOS and Android crafted with Flutter, React Native, and Expo.'
+  },
+  {
+    number: '03',
+    title: 'SAAS & CUSTOM SOFTWARE',
+    description: 'Tailored multi-tenant software systems, operational dashboards, and automated business platforms.'
+  },
+  {
+    number: '04',
+    title: 'AI & AUTOMATION',
+    description: 'Custom artificial intelligence integrations, LLM workflows, intelligent assistants, and automated pipelines.'
+  },
+  {
+    number: '05',
+    title: 'UI / UX & PRODUCT DEVELOPMENT',
+    description: 'End-to-end interface implementation translating Figma blueprints into pixel-perfect production code.'
+  },
+  {
+    number: '06',
+    title: 'BACKEND & API SYSTEMS',
+    description: 'Structured REST APIs, database schemas, authentication systems, and cloud backend microservices.'
+  }
+];
+
+export const verifiedPortfolioList: RealPortfolioItem[] = [
+  {
+    id: 'proj-1',
+    title: 'TRAVEL BOOKING WEBSITE',
+    category: 'TRAVEL & HOSPITALITY',
+    technology: 'React / Next.js / Tailwind CSS / API Integration',
+    status: 'SHIPPED',
+    description: 'Custom digital product developed for a client.'
+  },
+  {
+    id: 'proj-2',
+    title: 'AI-POWERED SERVICE & BOOKING MOBILE APP',
+    category: 'MOBILE APPLICATION & AI',
+    technology: 'Flutter / Firebase / LLM APIs / Cloud Functions',
+    status: 'SHIPPED',
+    description: 'Custom digital product developed for a client.'
+  },
+  {
+    id: 'proj-3',
+    title: 'NFT MARKETPLACE WEBSITE',
+    category: 'WEB APPLICATIONS',
+    technology: 'React / TypeScript / Web3 APIs / Tailwind CSS',
+    status: 'SHIPPED',
+    description: 'Custom digital product developed for a client.'
+  },
+  {
+    id: 'proj-4',
+    title: 'MODERN RESTAURANT WEB APP WITH ONLINE ORDERING',
+    category: 'E-COMMERCE & HOSPITALITY',
+    technology: 'Next.js / Node.js / Database / Payment Flow',
+    status: 'SHIPPED',
+    description: 'Custom digital product developed for a client.'
+  },
+  {
+    id: 'proj-5',
+    title: 'RESPONSIVE INTERIOR DESIGN WEBSITE',
+    category: 'DIGITAL EXPERIENCES',
+    technology: 'HTML5 / CSS3 / JavaScript / Responsive Grid',
+    status: 'SHIPPED',
+    description: 'Custom digital product developed for a client.'
   }
 ];

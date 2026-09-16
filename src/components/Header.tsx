@@ -8,6 +8,7 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks: { id: NavTab; label: string; href: string }[] = [
+    { id: 'developer', label: 'FOUNDER / DEV', href: '#developer' },
     { id: 'work', label: 'WORK', href: '#work' },
     { id: 'services', label: 'SERVICES', href: '#services' },
     { id: 'solutions', label: 'SOLUTIONS', href: '#solutions' },
@@ -33,7 +34,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map((link) => {
             const isActive = activeTab === link.id;
             return (
