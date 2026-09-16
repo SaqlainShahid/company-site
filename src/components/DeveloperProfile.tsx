@@ -1,4 +1,5 @@
 import React from 'react';
+import { useAppStore } from '../store/useAppStore';
 import { 
   developerVerifiedData, 
   verifiedReviewsList, 
@@ -9,6 +10,22 @@ import {
 } from '../api/mockData';
 
 export const DeveloperProfile: React.FC = () => {
+  const currentView = useAppStore((state) => state.currentView);
+  const setCurrentView = useAppStore((state) => state.setCurrentView);
+
+  const handleStartConversation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (currentView !== 'home') {
+      setCurrentView('home');
+      setTimeout(() => {
+        const contactEl = document.querySelector('#contact');
+        if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    } else {
+      const contactEl = document.querySelector('#contact');
+      if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="w-full bg-[#171817] text-on-surface border-b border-[#343634] scroll-mt-20" id="developer">
       
@@ -554,6 +571,7 @@ export const DeveloperProfile: React.FC = () => {
               </span>
               <a 
                 href="#contact" 
+                onClick={handleStartConversation}
                 className="bg-[#FF4500] text-white font-headline text-label-lg uppercase tracking-wider px-6 py-3 border border-[#FF4500] hover:bg-transparent hover:text-[#FF4500] transition-all"
               >
                 [START A CONVERSATION →]

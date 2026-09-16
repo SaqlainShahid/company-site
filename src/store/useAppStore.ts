@@ -2,6 +2,9 @@ import { create } from 'zustand';
 import type { NavTab, BriefFormData } from '../types';
 
 interface AppState {
+  currentView: 'home' | 'developer';
+  setCurrentView: (view: 'home' | 'developer') => void;
+
   activeNavTab: NavTab;
   setActiveNavTab: (tab: NavTab) => void;
 
@@ -25,8 +28,27 @@ const initialFormData: BriefFormData = {
   description: ''
 };
 
+const getInitialView = (): 'home' | 'developer' => {
+  if (typeof window !== 'undefined' && window.location.hash.includes('developer')) {
+    return 'developer';
+  }
+  return 'home';
+};
+
 export const useAppStore = create<AppState>((set) => ({
-  activeNavTab: 'work',
+  currentView: getInitialView(),
+  setCurrentView: (view) => {
+    if (typeof window !== 'undefined') {
+      window.location.hash = view === 'developer' ? '#/developer' : '#/';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    set({ 
+      currentView: view,
+      activeNavTab: view === 'developer' ? 'developer' : 'work'
+    });
+  },
+
+  activeNavTab: getInitialView() === 'developer' ? 'developer' : 'work',
   setActiveNavTab: (tab) => set({ activeNavTab: tab }),
 
   expandedFaqId: 'faq-1',

@@ -3,6 +3,8 @@ import { useAppStore } from '../store/useAppStore';
 import type { NavTab } from '../types';
 
 export const Header: React.FC = () => {
+  const currentView = useAppStore((state) => state.currentView);
+  const setCurrentView = useAppStore((state) => state.setCurrentView);
   const activeTab = useAppStore((state) => state.activeNavTab);
   const setActiveTab = useAppStore((state) => state.setActiveNavTab);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,6 +18,52 @@ export const Header: React.FC = () => {
     { id: 'about', label: 'ABOUT', href: '#about' },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, linkId: NavTab, href: string) => {
+    e.preventDefault();
+    if (linkId === 'developer') {
+      setCurrentView('developer');
+    } else {
+      if (currentView !== 'home') {
+        setCurrentView('home');
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 80);
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      setActiveTab(linkId);
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (currentView !== 'home') {
+      setCurrentView('home');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (currentView !== 'home') {
+      setCurrentView('home');
+      setTimeout(() => {
+        const element = document.querySelector('#contact');
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    } else {
+      const element = document.querySelector('#contact');
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 w-full z-50 bg-[#171817]/90 backdrop-blur-md border-b border-[#343634]">
       <div className="h-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -24,6 +72,7 @@ export const Header: React.FC = () => {
           <a 
             className="font-headline text-headline-sm tracking-widest text-primary flex items-center gap-2 hover:text-[#FF4500] transition-colors" 
             href="#"
+            onClick={handleLogoClick}
           >
             [STUDIO / 001]
           </a>
@@ -36,12 +85,12 @@ export const Header: React.FC = () => {
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map((link) => {
-            const isActive = activeTab === link.id;
+            const isActive = currentView === 'developer' ? link.id === 'developer' : activeTab === link.id;
             return (
               <a
                 key={link.id}
                 href={link.href}
-                onClick={() => setActiveTab(link.id)}
+                onClick={(e) => handleNavClick(e, link.id, link.href)}
                 className={`font-headline text-label-lg uppercase tracking-wider transition-colors ${
                   isActive
                     ? 'text-[#FF4500] font-bold'
@@ -59,6 +108,7 @@ export const Header: React.FC = () => {
           <a 
             className="hidden sm:flex bg-[#FF4500] text-white font-headline text-label-lg uppercase tracking-wider px-4 sm:px-6 py-3 border border-[#FF4500] hover:bg-transparent hover:text-[#FF4500] transition-all items-center gap-2" 
             href="#contact"
+            onClick={handleContactClick}
           >
             [CONTACT / START A PROJECT →]
           </a>
@@ -91,8 +141,8 @@ export const Header: React.FC = () => {
             <a
               key={link.id}
               href={link.href}
-              onClick={() => {
-                setActiveTab(link.id);
+              onClick={(e) => {
+                handleNavClick(e, link.id, link.href);
                 setMobileMenuOpen(false);
               }}
               className="block font-headline text-sm uppercase tracking-wider text-on-surface-variant hover:text-[#FF4500]"
@@ -102,7 +152,10 @@ export const Header: React.FC = () => {
           ))}
           <a
             href="#contact"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => {
+              handleContactClick(e);
+              setMobileMenuOpen(false);
+            }}
             className="block bg-[#FF4500] text-white font-headline text-xs uppercase tracking-wider px-4 py-3 text-center border border-[#FF4500] mt-4"
           >
             [CONTACT / START A PROJECT →]
